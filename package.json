@@ -1,0 +1,15 @@
+{
+  "name": "canvas-pong",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "build": "spago build",
+    "test": "spago -x tests.dhall test",
+    "bundle": "spago bundle-app -t ./build/index.js",
+    "dev": "yarn build && parcel serve ./index.dev.html --dist-dir public",
+    "prod": "yarn bundle && parcel build ./index.html --dist-dir public"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
+  }
+}
